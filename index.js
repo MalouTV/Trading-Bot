@@ -220,14 +220,19 @@ https://i.imgur.com/IMAGE_TRENDS.png`
 `Voici les patterns les plus utilisés :
 
 1️⃣ Épaule–Tête–Épaule (E.T.E) → baissier  
+https://i.imgur.com/AEmFADv.png
 2️⃣ Inversé → haussier  
+https://i.imgur.com/T2CkyDO.png
 3️⃣ Double sommet → baissier  
-4️⃣ Double creux → haussier  
+https://i.imgur.com/gWmELgK.png
+4️⃣ Double creux → haussier 
+https://i.imgur.com/JDzlw1j.png
 5️⃣ Triangle ascendant → haussier  
+https://i.imgur.com/A4iu9b0.png
 6️⃣ Triangle descendant → baissier  
+https://i.imgur.com/SjpMdYi.png
 
-📸 **Illustration des patterns :**  
-https://i.imgur.com/IMAGE_PATTERNS.png`
+
             },
             {
                 name: "🔹 10. Zones de prix (Support / Résistance)",
@@ -414,6 +419,7 @@ client.on("interactionCreate", async interaction => {
 // ------------------------ LOGIN ------------------------
 
 client.login(process.env.TOKEN);
+
 
 
 
