@@ -113,10 +113,6 @@ Contactez :
     • Détection intelligente pour CPI, inflation, payrolls  
     • Analyse automatique positive / négative pour l’or
 
-    🔗 **Commandes textuelles améliorées**
-    • \`!liens\` : Accès rapide à TradingView, IC Markets, Investing  
-    • \`!attente\` : Support visuel pour l’accueil des traders
-
     ⚙️ **Améliorations techniques**
     • Intégration complète des slash commands  
     • Optimisation du chargement des handlers  
@@ -250,3 +246,4 @@ client.on("interactionCreate", async interaction => {
 // ------------------------ LOGIN ------------------------
 
 client.login(process.env.TOKEN);
+
