@@ -88,6 +88,170 @@ Contactez :
         });
     }
 
+    // !cours1
+if (message.content.startsWith("!cours1")) {
+    const embed = new EmbedBuilder()
+        .setColor("#091222")
+        .setTitle("📘 Cours 1 — Bases du Trading (Forex & Indices)")
+        .setDescription("Voici le cours complet, organisé en sections avec les images Imgur correspondantes.")
+        .addFields(
+            {
+                name: "🔹 1. Le Forex : Définition & Fonctionnement",
+                value:
+`Le Forex (Foreign Exchange) est le marché où s’échangent les devises. C’est le marché le plus liquide au monde, ouvert 24h/24 – 5j/7.
+
+Tu spécules sur la hausse ou la baisse d’une devise contre une autre (ex : EUR/USD).
+
+**Buy / Long** → tu paries que la première devise monte.  
+**Sell / Short** → tu paries qu’elle baisse.
+
+👉 Tu trades toujours une devise *contre une autre*.
+
+📸 **Exemple Buy/Sell :**  
+https://i.imgur.com/IMAGE_BUYSELL.png`,
+            },
+            {
+                name: "🔹 2. Le Spread",
+                value:
+`Le spread = différence entre le prix réel du marché et le prix proposé par le broker.
+
+→ C’est un **coût caché** indispensable.  
+→ Spread faible = forte liquidité.  
+→ Les indices (US30, US100) ont souvent un spread plus élevé.
+
+📸 **Exemple Spread Bid/Ask :**  
+https://i.imgur.com/IMAGE_SPREAD.png`
+            },
+            {
+                name: "🔹 3. Deux types d’analyses",
+                value:
+`**Analyse fondamentale :**  
+Étudie les news économiques, politiques, décisions des banques centrales.  
+Impact par devise :  
+• USD → Fed  
+• EUR → BCE  
+• JPY → BoJ  
+• GBP → Bank of England
+
+**Analyse technique :**  
+Étude du graphique, des structures, patterns, supports, résistances.  
+🎯 Objectif : construire des scénarios probables.
+
+📸 **Exemple analyse technique :**  
+https://i.imgur.com/IMAGE_AT.png`
+            },
+            {
+                name: "🔹 4. Le Pip",
+                value:
+`Le pip = Point in Percentage.  
+C’est la plus petite variation standardisée d’un prix Forex.
+
+Exemple : 1.0850 → 1.0851 = **1 pip**
+
+Il sert à calculer :  
+• Stop loss  
+• Take profit  
+• Taille de lot
+
+C’est la base du money management.
+
+📸 **Exemple calcul pip :**  
+https://i.imgur.com/IMAGE_PIP.png`
+            },
+            {
+                name: "🔹 5. Effet de levier",
+                value:
+`Le levier permet de contrôler une position plus grande que son capital.
+
+Ex : 100 € avec levier 1:100 → tu contrôles 10 000 €.
+
+⚠️ Amplifie les gains mais aussi les pertes.`
+            },
+            {
+                name: "🔹 6. Différents actifs",
+                value:
+`**Actions :** part de propriété d’une entreprise.  
+**Obligations :** prêt rémunéré à un État ou une entreprise.  
+**Forex :** marché des devises, extrêmement liquide.  
+**Indices :** regroupement de grandes entreprises →  
+• US30 (Dow Jones)  
+• US100 (Nasdaq 100)  
+• SPX (S&P 500)
+
+**Crypto :** actifs numériques sur blockchain.
+
+📸 **Présentation indices US :**  
+https://i.imgur.com/IMAGE_INDICES.png`
+            },
+            {
+                name: "🔹 7. Les sessions de Trading",
+                value:
+`**Sydney (22h–7h)** → faible volatilité, AUD/NZD.  
+**Tokyo (23h–7h)** → JPY très volatile (forte réaction aux décisions BoJ).  
+
+📸 **Paires JPY très volatiles :**  
+https://i.imgur.com/IMAGE_JPY.png
+
+**Londres (7h–16h)** → session la plus active du monde.  
+Pairs les plus touchées : EUR, GBP, CHF.
+
+**New York (12h–20h)** → impact énorme sur USD & indices US.
+
+**Overlaps (chevauchements) :**  
+• Londres + New York → 14h–17h : énorme volatilité  
+• Sydney + Tokyo → volatilité AUD/NZD/JPY
+
+📸 **Schéma sessions mondiales :**  
+https://i.imgur.com/IMAGE_SESSIONS.png`
+            },
+            {
+                name: "🔹 8. Les Tendances",
+                value:
+`**Tendance haussière (Bullish)** → sommets + creux de plus en plus hauts  
+**Tendance baissière (Bearish)** → sommets + creux de plus en plus bas  
+**Range** → prix oscillant entre support et résistance
+
+📸 **Exemple Uptrend / Downtrend / Range :**  
+https://i.imgur.com/IMAGE_TRENDS.png`
+            },
+            {
+                name: "🔹 9. Patterns Chartistes",
+                value:
+`Voici les patterns les plus utilisés :
+
+1️⃣ Épaule–Tête–Épaule (E.T.E) → baissier  
+2️⃣ Inversé → haussier  
+3️⃣ Double sommet → baissier  
+4️⃣ Double creux → haussier  
+5️⃣ Triangle ascendant → haussier  
+6️⃣ Triangle descendant → baissier  
+
+📸 **Illustration des patterns :**  
+https://i.imgur.com/IMAGE_PATTERNS.png`
+            },
+            {
+                name: "🔹 10. Zones de prix (Support / Résistance)",
+                value:
+`Ce sont les zones où le prix réagit fortement.
+
+Un prix peut :  
+• rebondir (réaction)  
+• casser (breakout)  
+• faire un faux breakout (piège)
+
+📸 **Exemple Support / Résistance :**  
+https://i.imgur.com/IMAGE_SR.png`
+            }
+        )
+        .setFooter({ text: "Formation Trading — Chapitre 1", iconURL: "https://i.imgur.com/YlLrFJr.png" })
+        .setImage("attachment://banner_cours1.png");
+
+    message.channel.send({
+        embeds: [embed],
+        files: [{ attachment: "https://i.imgur.com/9vQskFX.png", name: "banner_cours1.png" }]
+    });
+}
+
     
 
     // !devblogs
@@ -112,6 +276,10 @@ Contactez :
     📊 **Analyse d’impact GOLD**
     • Détection intelligente pour CPI, inflation, payrolls  
     • Analyse automatique positive / négative pour l’or
+
+    🔗 **Commandes textuelles améliorées**
+    • \`!liens\` : Accès rapide à TradingView, IC Markets, Investing  
+    • \`!attente\` : Support visuel pour l’accueil des traders
 
     ⚙️ **Améliorations techniques**
     • Intégration complète des slash commands  
@@ -246,4 +414,7 @@ client.on("interactionCreate", async interaction => {
 // ------------------------ LOGIN ------------------------
 
 client.login(process.env.TOKEN);
+
+
+
 
