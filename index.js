@@ -66,27 +66,35 @@ Contactez :
     }
 
     // !liens
-    if (message.content.startsWith("!liens")) {
-        const embed = new EmbedBuilder()
-            .setColor("#091222")
-            .setTitle("🔗 Liens Utiles — Outils de Trading")
-            .setDescription(
-`📈 TradingView  
-➡️ https://www.tradingview.com/
+if (message.content.startsWith("!liens")) {
+    const embed = new EmbedBuilder()
+        .setColor("#091222")
+        .setTitle("🔗 Liens Utiles — Outils de Trading")
+        .setDescription(
+`📈 **TradingView**  
+➡️ [Accéder à TradingView](https://www.tradingview.com/)
 
-💹 IC Markets  
-➡️ https://www.icmarkets.eu/en/
+💹 **IC Markets**  
+➡️ [Accéder à IC Markets](https://www.icmarkets.eu/en/)
 
-📰 Investing.com  
-➡️ https://www.investing.com/`)
-            .setFooter({ text: "Outils essentiels", iconURL: "https://i.imgur.com/YlLrFJr.png" })
-            .setImage("attachment://banner.png");
+🏦 **RaiseFX**  
+➡️ [Plateforme RaiseFX](https://live.raisefx.com/)
 
-        message.channel.send({
-            embeds: [embed],
-            files: [{ attachment: "https://i.imgur.com/ufiNP1t.png", name: "banner.png" }]
-        });
-    }
+🎓 **Formation Circle Trading**  
+➡️ [Accéder à la formation](https://jade21.podia.com/circle-formations/buy)
+
+🎨 **Template Canva (Circle)**  
+➡️ [Voir le design Canva](https://www.canva.com/design/DAF0nSGLpMQ/erourlJTvg7cIpypTkIbsA/view)`
+        )
+        .setFooter({ text: "Outils essentiels", iconURL: "https://i.imgur.com/YlLrFJr.png" })
+        .setImage("attachment://banner.png");
+
+    message.channel.send({
+        embeds: [embed],
+        files: [{ attachment: "https://i.imgur.com/ufiNP1t.png", name: "banner.png" }]
+    });
+}
+
 
     // !cours1
 if (message.content.startsWith("!cours1")) {
@@ -351,6 +359,7 @@ client.on("interactionCreate", async interaction => {
 // ------------------------ LOGIN ------------------------
 
 client.login(process.env.TOKEN);
+
 
 
 
