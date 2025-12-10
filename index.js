@@ -83,8 +83,8 @@ if (message.content.startsWith("!liens")) {
 🎓 **Formation Circle Trading**  
 ➡️ [Accéder à la formation](https://jade21.podia.com/circle-formations/buy)
 
-🎨 **Template Canva (Circle)**  
-➡️ [Voir le design Canva](https://www.canva.com/design/DAF0nSGLpMQ/erourlJTvg7cIpypTkIbsA/view)`
+🎨 **Ebook Trading de Yans**  
+➡️ [Voir l'Ebook Canva](https://www.canva.com/design/DAF0nSGLpMQ/erourlJTvg7cIpypTkIbsA/view)`
         )
         .setFooter({ text: "Outils essentiels", iconURL: "https://i.imgur.com/YlLrFJr.png" })
         .setImage("attachment://banner.png");
@@ -359,6 +359,7 @@ client.on("interactionCreate", async interaction => {
 // ------------------------ LOGIN ------------------------
 
 client.login(process.env.TOKEN);
+
 
 
 
