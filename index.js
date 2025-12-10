@@ -127,151 +127,47 @@ if (message.content.startsWith("!liens")) {
 }
 
 
-    // !cours1
-if (message.content.startsWith("!cours1")) {
+    // !comptes
+if (message.content.startsWith("!comptes")) {
+    const embed = new EmbedBuilder()
+        .setColor("#091222")
+        .setTitle("🔐 Comptes de Trading — Accès & Informations")
+        .setDescription(
+`Voici les accès organisés de manière claire.
 
-    const embed1 = new EmbedBuilder()
-        .setColor("#091222")
-        .setTitle("📘 Cours 1 — Bases du Trading (Partie 1)")
-        .setDescription("Sections 1 à 4 du cours complet. Les images Imgur sont des placeholders à remplacer.")
-        .addFields(
-            {
-                name: "🔹 1. Le Forex : Définition & Fonctionnement",
-                value:
-"Le Forex (Foreign Exchange) est le marché où s’échangent les devises.\n" +
-"Il est ouvert 24h/24 – 5j/7.\n\n" +
-"**Buy / Long** → parier sur la montée.\n" +
-"**Sell / Short** → parier sur la baisse.\n\n" +
-"📸 Exemple : https://i.imgur.com/IMAGE_BUYSELL.png"
-            },
-            {
-                name: "🔹 2. Le Spread",
-                value:
-"Le spread est la différence entre le prix réel et le prix du broker.\n" +
-"C’est un coût caché.\n\n" +
-"📸 Exemple : https://i.imgur.com/IMAGE_SPREAD.png"
-            },
-            {
-                name: "🔹 3. Types d’analyses",
-                value:
-"**Analyse fondamentale** → news, banques centrales, etc.\n" +
-"**Analyse technique** → graphiques, patterns, zones.\n\n" +
-"📸 Exemple : https://i.imgur.com/IMAGE_AT.png"
-            },
-            {
-                name: "🔹 4. Le Pip",
-                value:
-"Le pip est la plus petite variation standardisée.\n" +
-"Ex : 1.0850 → 1.0851 = **1 pip**.\n\n" +
-"📸 Exemple : https://i.imgur.com/IMAGE_PIP.png"
-            }
-        )
-        .setFooter({ text: "Cours 1 — Partie 1" });
-    const embed2 = new EmbedBuilder()
-        .setColor("#091222")
-        .setTitle("📘 Cours 1 — Bases du Trading (Partie 2)")
-        .addFields(
-            {
-                name: "🔹 5. Effet de levier",
-                value:
-"L’effet de levier permet de trader plus gros que son capital.\n" +
-"Ex : 100€ → levier 1:100 → 10 000€ contrôlés."
-            },
-            {
-                name: "🔹 6. Actifs financiers",
-                value:
-"- Actions\n- Obligations\n- Forex\n- Indices (US30, US100, SPX)\n- Crypto\n\n" +
-"📸 Indices US : https://i.imgur.com/IMAGE_INDICES.png"
-            },
-            {
-                name: "🔹 7. Sessions de trading",
-                value:
-"**Sydney** 22h–7h (faible volatilité)\n" +
-"**Tokyo** 23h–7h (JPY très volatile)\n" +
-"**Londres** 7h–16h (plus active du monde)\n" +
-"**New York** 12h–20h\n\n" +
-"📸 Sessions : https://i.imgur.com/IMAGE_SESSIONS.png"
-            },
-            {
-                name: "🔹 8. Tendances",
-                value:
-"**Haussière** = HL + HH\n" +
-"**Baissière** = LH + LL\n" +
-"**Range** = support ↔ résistance\n\n" +
-"📸 Exemples : https://i.imgur.com/IMAGE_TRENDS.png"
-            }
-        )
-        .setFooter({ text: "Cours 1 — Partie 2" });
-    const embed3 = new EmbedBuilder()
-        .setColor("#091222")
-        .setTitle("📘 Cours 1 — Bases du Trading (Partie 3)")
-        .addFields(
-            {
-                name: "🔹 9. Patterns chartistes",
-                value:
-"1️⃣ Épaule-Tête-Épaule → baissier : https://i.imgur.com/AEmFADv.png\n" +
-"2️⃣ Inversé → haussier : https://i.imgur.com/T2CkyDO.png\n" +
-"3️⃣ Double sommet → baissier : https://i.imgur.com/gWmELgK.png\n" +
-"4️⃣ Double creux → haussier : https://i.imgur.com/JDzlw1j.png\n" +
-"5️⃣ Triangle ascendant → haussier : https://i.imgur.com/A4iu9b0.png\n" +
-"6️⃣ Triangle descendant → baissier : https://i.imgur.com/SjpMdYi.png"
-            },
-            {
-                name: "🔹 10. Supports & Résistances",
-                value:
-"Un prix peut rebondir, casser, ou faire un faux breakout.\n\n" +
-"📸 Exemple : https://i.imgur.com/IMAGE_SR.png"
-            }
-        )
-        .setFooter({ text: "Cours 1 — Partie 3" });
+---
 
-    message.channel.send({ embeds: [embed1, embed2, embed3] });
+## 👤 **Paul**
+
+### 🟦 RaiseFX
+• **Login ID :** \`RAISEFX_PAUL_ID\`  
+• **Password :** \`RAISEFX_PAUL_MDP\`  
+• **Server :** \`RaiseGlobal-Live\`
+
+### 🟩 IC Markets
+• **Login ID :** \`ICM_PAUL_ID\`  
+• **Password :** \`ICM_PAUL_MDP\`  
+• **Server :** \`ICMarketsEU-MT5-5\`
+
+---
+
+## 👤 **Maël**
+
+### 🟦 RaiseFX
+• **Login ID :** \`RAISEFX_MAEL_ID\`  
+• **Password :** \`RAISEFX_MAEL_MDP\`  
+• **Server :** \`RaiseGlobal-Live\`
+
+---
+
+⚠️ **Sécurité :**  
+Les identifiants sont à usage interne. Ne les partagez jamais publiquement.`
+        )
+        .setFooter({ text: "Accès privés", iconURL: "https://i.imgur.com/YlLrFJr.png" });
+
+    message.channel.send({ embeds: [embed] });
 }
 
-    
-
-    // !devblogs
-    if (message.content.startsWith("!devblogs")) {
-
-        const embed = new EmbedBuilder()
-            .setColor("#091222")
-            .setTitle("🛠️ DevBlogs — Trading Bot v1.0")
-            .setDescription(
-    `Voici les nouveautés de la **version 1.0** du bot de trading.
-
-    🚀 **Rapport économique automatique**
-    • Envoi d’un rapport chaque matin à 8h30  
-    • Affichage détaillé : pays, importance, prévisions, impacts
-
-    📡 **Surveillance économique en temps réel**
-    • Scan des annonces toutes les minutes  
-    • Détection automatique des nouvelles données publiées  
-    • Affichage instantané des résultats + impact GOLD  
-    • Anti-spam intégré grâce au système de détection d’ID
-
-    📊 **Analyse d’impact GOLD**
-    • Détection intelligente pour CPI, inflation, payrolls  
-    • Analyse automatique positive / négative pour l’or
-
-    🔗 **Commandes textuelles améliorées**
-    • \`!liens\` : Accès rapide à TradingView, IC Markets, Investing  
-    • \`!attente\` : Support visuel pour l’accueil des traders
-
-    ⚙️ **Améliorations techniques**
-    • Intégration complète des slash commands  
-    • Optimisation du chargement des handlers  
-    • Refonte des requêtes API + gestion des erreurs  
-    • Système de cache pour éviter les doublons d’annonces
-
-    La v1.0 marque le début du bot d'analyse macro-éco automatisée, pensé pour les traders actifs.`)
-            .setFooter({ text: "DevBlogs — Version 1.0", iconURL: "https://i.imgur.com/YlLrFJr.png" })
-            .setImage("attachment://banner.png");
-
-        message.channel.send({
-            embeds: [embed],
-            files: [{ attachment: "https://i.imgur.com/GDtpiR6.png", name: "banner.png" }]
-        });
-    }
 
     
 
@@ -392,6 +288,7 @@ client.on("interactionCreate", async interaction => {
 // ------------------------ LOGIN ------------------------
 
 client.login(process.env.TOKEN);
+
 
 
 
