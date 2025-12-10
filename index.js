@@ -45,25 +45,56 @@ client.once("ready", () => {
 client.on("messageCreate", async (message) => {
     if (message.author.bot) return;
 
-    // !attente
-    if (message.content.startsWith("!attente")) {
-        const embed = new EmbedBuilder()
-            .setColor("#091222")
-            .setTitle("📊 Serveur de Trade — Accès Restreint")
-            .setDescription(
-`Bienvenue sur le serveur privé de trading.
+    // !results
+if (message.content.startsWith("!results")) {
+    const embed = new EmbedBuilder()
+        .setColor("#0a1a2f")
+        .setTitle("📊 Résultats Hebdomadaires — Semaine du 1 au 5 décembre")
+        .setDescription(
+`Voici les performances réalisées du **lundi 1 au vendredi 5 décembre**.
 
-Contactez :
-<@887008564240056350>
-<@641643688967012363>`)
-            .setFooter({ text: "Vérification obligatoire", iconURL: "https://i.imgur.com/YlLrFJr.png" })
-            .setImage("attachment://banner.png");
+---
 
-        message.channel.send({
-            embeds: [embed],
-            files: [{ attachment: "https://i.imgur.com/9vQskFX.png", name: "banner.png" }]
+📉 **Récapitulatif global :**
+
+💰 **Résultat final : –367.91 €**  
+📅 **Période : 1 → 5 décembre**  
+🏦 **Courtier : IC Markets**
+
+---
+
+📘 **Détails :**
+
+• Total des gains : **+92.31 €**  
+• Total des pertes : **–460.22 €**  
+➡️ **Résultat final : –367.91 €**
+
+---
+
+🎯 **Statistiques avancées :**
+
+🎯 Winrate : **58.33%**  
+📉 Drawdown max : **–178.45 €**  
+📊 Trades : **24** (**14 gagnants / 10 perdants**)
+
+---
+
+📝 **Remarque :**  
+Les résultats ont été vérifiés manuellement depuis MT5.  
+Un nouveau rapport est publié chaque fin de semaine.`
+        )
+        .setImage("attachment://results.png")
+        .setFooter({
+            text: "Rapport hebdomadaire",
+            iconURL: "https://i.imgur.com/YlLrFJr.png"
         });
-    }
+
+    message.channel.send({
+        embeds: [embed],
+        files: [{ attachment: "https://i.imgur.com/rWKTHdS.png", name: "results.png" }]
+    });
+}
+
 
     // !liens
 if (message.content.startsWith("!liens")) {
@@ -242,6 +273,8 @@ if (message.content.startsWith("!cours1")) {
         });
     }
 
+    
+
 });
 
 // ------------------------ ÉCONOMIE : FONCTIONS MANQUANTES (FIX) ------------------------
@@ -359,6 +392,7 @@ client.on("interactionCreate", async interaction => {
 // ------------------------ LOGIN ------------------------
 
 client.login(process.env.TOKEN);
+
 
 
 
